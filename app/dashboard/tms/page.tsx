@@ -28,7 +28,7 @@ export default function Page() {
     setnbMail(Math.max(nbMails - 1, 0));
   }
 
-  const toggleDrawer = (newOpen) => () => {
+  const toggleDrawer = (newOpen: boolean | ((prevState: boolean) => boolean)) => () => {
     setOpen(newOpen);
   };
 
